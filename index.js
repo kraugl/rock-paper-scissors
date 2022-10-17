@@ -2,15 +2,15 @@ const computerChoices = ['rock','paper','scissors'];
 
 //let getComputerChoices = computerChoices[Math.floor(Math.random() * (computerChoices.length - 1))];
 
-function getComputerChoices(){
+function getComputerChoice(){
     return computerChoices[Math.floor(Math.random() * computerChoices.length)];
 };
 
 function playRound(playerSelection, computerSelection){
-    let player = playerSelection.toLowercase();
+    let player = playerSelection.toLowerCase();
     let computer = computerSelection;
-    let youWin = 'You win!!!' + player + ' beats ' + computerSelection;
-    let youLose = 'You lose!!!' + player + ' beats ' + computerSelection;
+    let youWin = 'You win!!! ' + player + ' beats ' + computer;
+    let youLose = 'You lose!!! ' + computer + ' beats ' + player;
     let draw = 'Draw!!! play again!!!'
 
     if((player === 'rock' && computer === 'scissors') || (player === 'scissors' && computer === 'paper') || (player === 'paper' && computer === 'rock')){
@@ -23,3 +23,4 @@ function playRound(playerSelection, computerSelection){
         return 'Choose between rock, paper or scissors!!!'
     };
 };
+
