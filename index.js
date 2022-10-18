@@ -1,6 +1,9 @@
-const computerChoices = ['rock','paper','scissors'];
+let playerSelection;
+let computerSelection;
+let playerScore = 0;
+let computerScore = 0;
 
-//let getComputerChoices = computerChoices[Math.floor(Math.random() * (computerChoices.length - 1))];
+const computerChoices = ['rock','paper','scissors'];
 
 function getComputerChoice(){
     return computerChoices[Math.floor(Math.random() * computerChoices.length)];
